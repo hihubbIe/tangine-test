@@ -3,6 +3,13 @@ name = "tangine-ui-test"
 version = "0.1.0"
 edition = "2024"
 
+[profile.release-optimized]
+inherits = "release"
+lto = "fat"
+codegen-units = 1
+
+
 [dependencies]
 tangine = { path = "../tangine" }
 glam = "0.32.0"
+rand = "0.9"
